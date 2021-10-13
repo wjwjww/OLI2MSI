@@ -7,8 +7,8 @@ the dataset has an upscale factor of 3. More details about OLI2MSI can be found 
 
 ---
 <img src='imgs/data_samples.png'>
-LR-HR image-pair samples in OLI2MSI training set. The first row is LR images from Landsat8-OLI, while the second row is the
-corresponding HR images from Sentinel2-MSI.
+LR-HR image-pair samples in OLI2MSI training set. The first row is LR images from Landsat8-OLI (30m GSD), while the second row is the
+corresponding HR images from Sentinel2-MSI (10m GSD).
 
 ## Getting Started
 ### Download OLI2MSI dataset
@@ -19,9 +19,9 @@ All data is hosted on [Baidu Wangpan with extract code: rssr](https://pan.baidu.
 | :--- | :--: | ----: | :----: | :----------
 | OLI2MSI-dataset | 7.5 GB | 10,650 | | Main folder
 | &boxvr;&nbsp; train_hr | 6.0 GB | 5,225 | GeoTiff | Aligned and cropped HR images at 480×480 for training
-| &boxvr;&nbsp; train_lr | 1.4 GB | 5,225 | GeoTiff | Aligned and cropped HR images at 160×160 for training
+| &boxvr;&nbsp; train_lr | 1.4 GB | 5,225 | GeoTiff | Aligned and cropped LR images at 160×160 for training
 | &boxvr;&nbsp; test_hr | 115.2 MB | 100 | GeoTiff | Aligned and cropped HR images at 480×480 for testing
-| &boxvr;&nbsp; test_lr | 26.7 MB | 100 | GeoTiff | Aligned and cropped HR images at 160×160 for testing
+| &boxvr;&nbsp; test_lr | 26.7 MB | 100 | GeoTiff | Aligned and cropped LR images at 160×160 for testing
 
 **Note**: All files are in GeoTiff format. GeoTIFF is a public domain metadata standard which allows georeferencing information to be embedded within a TIFF file. The potential additional information includes map projection, coordinate systems, ellipsoids, datums, and everything else necessary to establish the exact spatial reference for the file. We recommend using [rasterio](https://github.com/mapbox/rasterio) to read the files. Also, you can run 'convertpng.py' to convert the GeoTiff files to png files with the georeferencing information lost.
 
